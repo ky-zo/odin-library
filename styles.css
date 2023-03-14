@@ -1,0 +1,232 @@
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+:root {
+    --tableColumns: 10% 1fr 20% 15% 15%;
+}
+
+h1,
+h2,
+h3 {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(110.52deg, #c9d4ea -25.77%, #f7dac5 63.62%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100dvh;
+}
+
+.mainTable {
+    min-width: 90vw;
+    min-height: 90vh;
+    background-color: white;
+    border-radius: 15px;
+    display: grid;
+    grid-template-rows: 100px 90px 1fr;
+}
+
+.header {
+    padding: 40px;
+}
+
+.menu {
+    padding-left: 40px;
+}
+
+.addNew {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border: 1px white solid;
+    border-radius: 10px;
+    height: 2.5rem;
+    background-color: #f3f3f8;
+    padding: 0 10px 0 10px;
+    font-weight: 500;
+}
+
+.addNew:hover {
+    background-color: white;
+    border: 1px #644ded solid;
+    box-shadow: 2px 2px 14px 0px rgba(66, 68, 90, 0.21);
+    transition: 200ms;
+}
+
+.addNew:active {
+    background-color: white;
+    border: 1px #644ded solid;
+    box-shadow: inset 2px 2px 14px 0px rgba(66, 68, 90, 0.21);
+    transition: 100ms;
+}
+
+.table {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tableHeader,
+.tableRow {
+    display: grid;
+    grid-template-columns: var(--tableColumns);
+}
+
+.headerItem {
+    padding: 10px;
+    font-weight: 800;
+    color: #484964;
+    align-items: center;
+    background-color: white;
+    border-bottom: #eeeef2 1px solid;
+}
+
+.tableItem {
+    color: #484964;
+    padding: 10px;
+    border-bottom: #eeeef2 1px solid;
+}
+
+.filler {
+    flex: 1;
+}
+
+/* .table {
+    background-color: #eeeef2;
+    margin: 0 40px 40px 40px;
+    gap: 1px;
+    display: grid;
+    grid-template-columns: 10% 1fr 30% 10% 10%;
+    grid-auto-rows: 50px;
+}
+
+.table > div {
+    
+}
+
+.filler {
+    height: 1fr;
+    grid-column: span 5;
+} */
+
+.modal {
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border-radius: 10px;
+    z-index: 1;
+    width: clamp(300px, 20vw, 40vw);
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modalHeader {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #eeeef2 1px solid;
+}
+
+.modalContent {
+    padding: 15px;
+}
+
+.close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modalForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputFiled {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.inputFiled > label {
+    font-weight: 600;
+}
+
+.inputFiled > input {
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #f3f3f8;
+}
+
+.inputActive {
+    border: #644ded 1px solid;
+    box-shadow: 0px 0px 2px #ad9fff;
+}
+
+.readQ {
+    display: flex;
+    justify-content: space-around;
+}
+
+.readQ > div {
+    padding: 3px;
+}
+
+.addNewBook {
+    border: none;
+    height: 2.2rem;
+    width: 40%;
+    font-size: 1.1rem;
+    align-self: end;
+    color: #644ded;
+    font-weight: 700;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.addNewBook:hover {
+    background-color: white;
+    border: 1px #644ded solid;
+    box-shadow: 2px 2px 14px 0px rgba(66, 68, 90, 0.21);
+    transition: 200ms;
+}
+
+.addNewBook:active {
+    background-color: white;
+    border: 1px #644ded solid;
+    box-shadow: inset 2px 2px 14px 0px rgba(66, 68, 90, 0.21);
+    transition: 100ms;
+}

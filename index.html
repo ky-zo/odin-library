@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;600;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="scripts.js" defer></script>
+        <title>Library Odin Project</title>
+    </head>
+    <body>
+        <div class="mainTable">
+            <div class="header">
+                <h1>Book Library</h1>
+            </div>
+            <div class="menu">
+                <button data-modal-target="modal" class="addNew">
+                    <img src="images/plus.svg" alt="" />
+                    <p>Add new book</p>
+                </button>
+            </div>
+            <div class="table">
+                <div class="tableHeader">
+                    <div class="headerItem">Read</div>
+                    <div class="headerItem">Name</div>
+                    <div class="headerItem">Author</div>
+                    <div class="headerItem">Pages</div>
+                    <div class="headerItem">Rating</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="modalHeader">
+                <h3>Add New Book</h3>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modalContent">
+                <form action="/" method="post" class="modalForm" id="formNewBook">
+                    <div class="inputFiled">
+                        <label for="title">Title</label>
+                        <input type="text" name="title" id="title" />
+                    </div>
+                    <div class="inputFiled">
+                        <label for="author">Author</label>
+                        <input type="text" name="author" id="author" />
+                    </div>
+                    <div class="inputFiled">
+                        <label for="pages">No. of pages</label>
+                        <input type="number" name="pages" id="pages" />
+                    </div>
+                    <div class="inputFiled">
+                        <label for="rating">Rating</label>
+                        <input type="text" name="rating" id="rating" />
+                    </div>
+                    <div class="inputFiled readQ">
+                        <label>Did you read it?</label>
+                        <div class="readQ">
+                            <div>
+                                <label for="Yes">Yes</label>
+                                <input type="radio" name="status" id="yes" value="true" />
+                            </div>
+                            <div>
+                                <label for="No">No</label>
+                                <input type="radio" name="status" id="No" value="false" />
+                            </div>
+                        </div>
+                    </div>
+                    <button class="addNewBook">Add Book</button>
+                </form>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </body>
+</html>
