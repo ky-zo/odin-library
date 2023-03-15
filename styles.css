@@ -3,7 +3,7 @@
 }
 
 :root {
-    --tableColumns: 10% 1fr 20% 15% 15%;
+    --tableColumns: 10% 1fr 20% 15% 15% 10%;
 }
 
 h1,
@@ -149,6 +149,28 @@ body {
     background: none;
     font-size: 2rem;
     font-weight: bold;
+}
+
+.close-button-small {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 2px 15px;
+}
+
+.close-button-small:hover {
+    background-color: white;
+    border: 1px #644ded solid;
+    box-shadow: 2px 2px 14px 0px rgba(66, 68, 90, 0.21);
+    transition: 200ms;
+}
+
+.close-button-small:active {
+    background-color: white;
+    border: 1px #644ded solid;
+    box-shadow: inset 2px 2px 14px 0px rgba(66, 68, 90, 0.21);
+    transition: 100ms;
 }
 
 .overlay {
