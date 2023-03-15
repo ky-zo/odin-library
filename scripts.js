@@ -51,8 +51,7 @@ function addBookToLibrary(read, name, author, pages, rating) {
     table.appendChild(tableRow)
 }
 
-addBookToLibrary(true, 'Zero to One', 'Peter Thiel', '260', '5')
-addBookToLibrary(false, 'Two to Three', 'Dunkirk', '300', '3')
+addBookToLibrary(true, 'Zero to One', 'Peter Thiel', '224', '5')
 
 const openModalButton = document.querySelector('[data-modal-target]')
 const closeModalButton = document.querySelector('[data-close-button]')
